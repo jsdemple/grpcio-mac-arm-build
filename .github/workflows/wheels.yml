@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
   schedule:
-    - cron: '30 18 * * *'
+    - cron: '35 18 * * *'
 
 jobs:
   check_release:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get_release
-        uses: pozetroninc/github-action-get-latest-release@master
+        uses: jsdemple/github-action-get-latest-release@master
         with:
           repository: ${{ github.repository }}
 
