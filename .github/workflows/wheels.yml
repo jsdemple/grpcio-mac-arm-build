@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
   schedule:
-    - cron: '35 5 * * *'
+    - cron: '30 18 * * *'
 
 jobs:
   check_release:
@@ -24,7 +24,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.8'
           
       - name: Check latest available grpcio release
         id: grpcio_version
